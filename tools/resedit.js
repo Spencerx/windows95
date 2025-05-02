@@ -8,12 +8,11 @@ const exePath = process.argv[process.argv.length - 1]
 console.log(exePath)
 
 async function main() {
-  
   await resedit.resedit(exePath, {
     "productVersion": package.version,
     "fileVersion": package.version,
     "productName": package.productName,
-    "icon": path.join(__dirname, "../assets/icon.ico"),
+    "iconPath": path.join(__dirname, "../assets/icon.ico"),
     "win32Metadata": {
       "FileDescription": package.productName,
       "InternalName": package.name,
